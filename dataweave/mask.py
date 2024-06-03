@@ -1,4 +1,5 @@
 import numpy as np
+from .utils import polygon_to_mask_cv2, mask_to_polygon_cv2
 
 
 class MaskHandler:
@@ -35,3 +36,13 @@ class MaskHandler:
             current_pos += count
 
         return mask.reshape(shape)
+
+    @staticmethod
+    def polygon_to_mask(points, shape):
+        """Create a binary mask from a polygon."""
+        return polygon_to_mask_cv2(points, shape)
+
+    @staticmethod
+    def mask_to_polygon(mask):
+        """Create a polygon from mask"""
+        return mask_to_polygon_cv2(mask)

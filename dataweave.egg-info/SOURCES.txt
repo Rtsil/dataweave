@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+dataweave/__init__.py
+dataweave/mask.py
+dataweave/polygon.py
+dataweave/rle.py
+dataweave/utils.py
+dataweave.egg-info/PKG-INFO
+dataweave.egg-info/SOURCES.txt
+dataweave.egg-info/dependency_links.txt
+dataweave.egg-info/entry_points.txt
+dataweave.egg-info/requires.txt
+dataweave.egg-info/top_level.txt
