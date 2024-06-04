@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="dataweave",
-    version="0.1.0",
+    version="1.2.0",
     author="Tsilavo Tahina Rakotoarisoa",
     author_email="rtsilavotahina@gmail.com",
     description="A package for data manipulation, it has different functions e.g: encode/decode RLE, POLYGON manipulation, etc...",

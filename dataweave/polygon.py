@@ -1,5 +1,5 @@
 
-from .utils import polygon_to_mask_cv2, get_polygon_position_as_bbox_from_image, compress_polygon_to_bbox, mask_to_polygon_cv2, decompress_polygon_from_bbox
+from .utils import polygon_to_mask_cv2, get_polygon_position_as_bbox_from_image, compress_polygon_to_bbox, mask_to_polygon_cv2, decompress_polygon_from_bbox, mask_to_polygon_with_color
 from .mask import MaskHandler
 
 
@@ -38,6 +38,9 @@ class PolygonHandler:
         return polygon_to_mask_cv2(points, shape, color)
 
     @staticmethod
-    def mask_to_polygon(mask):
+    def binary_mask_to_polygon(mask):
         """Create a polygon from mask"""
         return mask_to_polygon_cv2(mask)
+    @staticmethod
+    def colored_mask_to_polygon(mask, color):
+        return mask_to_polygon_with_color(mask, color)

@@ -86,6 +86,20 @@ def mask_to_polygon_cv2(mask):
         return None
 
 
+def mask_to_polygon_with_color(mask, color):
+    lower_color = np.array(color)
+    upper_color = np.array(color)
+    mask = cv2.inRange(mask, lower_color, upper_color)
+    contours, _ = cv2.findContours(mask, cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
+
+    if contours:
+        contour = contours[0]
+        polygon = [tuple(point[0]) for point in contour]
+        return polygon
+    else:
+        return None
+
+
 def decompress_polygon_from_bbox(compressed_points, bbox):
     """
     Decompresses polygon points from their bounding box relative coordinates.
