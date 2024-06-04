@@ -75,7 +75,7 @@ print(rle)
 polygon = polyhandler.rle_to_polygon(rle, bbox)
 print(polygon)
 
-mask = polyhandler.polygon_to_mask(data, shape=(height, width))
+mask = polyhandler.polygon_to_mask(data, shape=(height, width), color=(255,255,255))
 print(mask)
 
 # Convert mask back to polygon vertices

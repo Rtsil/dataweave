@@ -28,9 +28,14 @@ class PolygonHandler:
 
 
     @staticmethod
-    def polygon_to_mask(points, shape):
+    def polygon_to_binary_mask(points, shape):
         """Create a binary mask from a polygon."""
         return polygon_to_mask_cv2(points, shape)
+
+    @staticmethod
+    def polygon_to_colored_mask(points, shape, color):
+        """Create a colored mask from a polygon."""
+        return polygon_to_mask_cv2(points, shape, color)
 
     @staticmethod
     def mask_to_polygon(mask):

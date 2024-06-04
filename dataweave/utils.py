@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 
-def polygon_to_mask_cv2(polygon_coords, mask_shape):
+def polygon_to_mask_cv2(polygon_coords, mask_shape, color=1):
     """
     Convert a polygon defined by its coordinates to a binary mask using OpenCV (cv2).
 
@@ -20,7 +20,7 @@ def polygon_to_mask_cv2(polygon_coords, mask_shape):
     pts = np.array(polygon_coords, dtype=np.int32)
 
     # Fill the polygon in the mask
-    cv2.fillPoly(mask, [pts], color=1)
+    cv2.fillPoly(mask, [pts], color=color)
 
     return mask
 
